@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './playquiz.css'
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
@@ -34,14 +35,36 @@ const Playquiz = () => {
         ...doc.data(),
       }));
       setQuizzes(quizzesList);
-      console.log(quizzesList);
+      // console.log(quizzesList);
     };
     fetchQuizzes();
   }, []);
 
-  const handleQuizSelection = () =>{
-    
-  }
+  const navigate = useNavigate();
+
+  const handleQuizSelection = async (event) => {
+    const quizId = event.target.value;
+    const quizRef = firestore.collection('quizzes').doc(quizId);
+    const quizDoc = await quizRef.get();
+    const quizData = quizDoc.data();
+    const problemIds = quizData.problems;
+
+    const problemRef = firestore.collection('problems').doc(problemIds);
+    const problemDoc = await problemRef.get();
+    const problemData = problemDoc.data();
+
+    // console.log(problemData.problems[0].prompt);
+
+    // navigate to Questions component and pass problemData as a prop
+
+
+    // history.push('/questions', { problemData });
+    const problem = problemData.problems;
+    navigate('/quizquestions', { state: { problem } });
+  };
+
+
+
 
   return (
     <div className="quiz-selection-page">
