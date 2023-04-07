@@ -122,7 +122,7 @@ const Setquiz = () => {
     // Use object spread syntax to create a new quiz object with updated questions array
     const newQuiz = { ...quiz, questions: [...questions] };
 
-    console.log(newQuiz);
+    // console.log(newQuiz);
 
     const problemsCollection = db.collection('problems');
     const problems = newQuiz.questions.map((q) => ({
@@ -133,7 +133,7 @@ const Setquiz = () => {
 
     try {
       const docRef = await problemsCollection.add({ problems });
-      console.log(`Problems ${docRef.id} added to the database`);
+      // console.log(`Problems ${docRef.id} added to the database`);
       const quizData = {
         name: newQuiz.quizname,
         timeLimit: newQuiz.timelimit,
@@ -142,7 +142,7 @@ const Setquiz = () => {
       };
       const quizzesCollection = db.collection('quizzes');
       await quizzesCollection.add(quizData);
-      console.log(`Quiz added to the database`);
+      // console.log(`Quiz added to the database`);
       setQuiz({
         quizname: '',
         timelimit: '',
@@ -166,7 +166,7 @@ const Setquiz = () => {
           {/* <form> */}
           {/* <h2>Quiz Name</h2> */}
           <div className="form-group">
-            <label htmlFor="quizname">Quiz Name</label>
+            <label htmlFor="quizname">Enter Quiz Name: </label>
             <input
               type="text"
               id="quizname"
@@ -175,7 +175,7 @@ const Setquiz = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="timelimit">Time Limit</label>
+            <label htmlFor="timelimit">Enter Number Of seconds Given Per Question: </label>
             <input
               type="text"
               id="timelimit"
@@ -185,7 +185,7 @@ const Setquiz = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="description">Quiz Description</label>
+            <label htmlFor="description">Enter Quiz Description: </label>
             <input
               type="text"
               id="description"
@@ -195,35 +195,35 @@ const Setquiz = () => {
           </div>
 
           <div className='form-group'>
-            <button onClick={handleAddQuestion}>Add question</button>
+            <button className='btn' onClick={handleAddQuestion}>Add Question</button>
             {quiz.questions.map((question, index) => (
               <div key={index}>
-                <button onClick={() => handleDeleteQuestion(index)}>Delete question</button>
+                <button className='btn' onClick={() => handleDeleteQuestion(index)}>Delete Question</button>
                 <div className='form-group__container'>
                   <label>
-                    Prompt: <br />
+                    Question: <br />
                     <input type="text" value={question.prompt} onChange={(event) => handleUpdatePrompt(index, event.target.value)} />
                   </label>
                 </div>
                 <div>
-                  Options: <br />
-                  <button onClick={(e) => handleAddOption(index, e)}>Add option</button>
+                  Add Options: <br />
+                  <button className='btn' onClick={(e) => handleAddOption(index, e)}>Add option</button>
                   {question.options.map((option, optionIndex) => (
                     <div key={optionIndex}>
                       <input type="text" value={option} onChange={(event) => handleUpdateOption(index, optionIndex, event.target.value)} />
-                      <button onClick={() => handleDeleteOption(index, optionIndex)}>Delete option</button>
+                      <button className='btn' onClick={() => handleDeleteOption(index, optionIndex)}>Delete</button>
                     </div>
                   ))}
                 </div>
                 <br />
 
                 <div>
-                  Correct Options: <br />
-                  <button onClick={(e) => handleAddCorrectOption(index, e)}>Add correct option</button>
+                  Add Correct Options Indexs: <br />
+                  <button className='btn' onClick={(e) => handleAddCorrectOption(index, e)}>Add Correct Option Index</button>
                   {question.correctOptions.map((correctOption, correctOptionIndex) => (
                     <div key={correctOptionIndex}>
                       <input type="text" value={correctOption} onChange={(event) => handleUpdateCorrectOption(index, correctOptionIndex, event.target.value)} />
-                      <button onClick={() => handleDeleteCorrectOption(index, correctOptionIndex)}>Delete correct option</button>
+                      <button className='btn' onClick={() => handleDeleteCorrectOption(index, correctOptionIndex)}>Delete</button>
                     </div>
                   ))}
                 </div>
@@ -231,7 +231,7 @@ const Setquiz = () => {
               </div>
             ))}
           </div>
-          <button type="submit">submit</button>
+          <button className='btn' type="submit">Submit</button>
         </form>
 
       </div>

@@ -49,20 +49,25 @@ const Playquiz = () => {
     const quizData = quizDoc.data();
     const problemIds = quizData.problems;
 
+    // console.log(quizData);
+  
     const problemRef = firestore.collection('problems').doc(problemIds);
     const problemDoc = await problemRef.get();
     const problemData = problemDoc.data();
-
-    // console.log(problemData.problems[0].prompt);
-
-    // navigate to Questions component and pass problemData as a prop
-
-
-    // history.push('/questions', { problemData });
+  
     const problem = problemData.problems;
-    navigate('/quizquestions', { state: { problem } });
-  };
+    const timelimit = quizData.timeLimit; // get the timelimit value from quizData
 
+    // console.log(timelimit);
+  
+    navigate('/quizquestions', { 
+      state: { 
+        problem,
+        timelimit, // add the timelimit value to the state object
+      }
+    });
+  };
+  
 
 
 
@@ -78,7 +83,7 @@ const Playquiz = () => {
               <h2 className="quiz-name">Quiz name: {quiz.name}</h2>
               <div className="quiz-details">
                 <p className="quiz-description">Quiz Description: {quiz.description}</p>
-                <p className="quiz-time">Quiz Time limit: {quiz.timelimit} minutes</p>
+                <p className="quiz-time">Quiz Time limit: {quiz.timeLimit} Seconds Per Question</p>
               </div>
             </Link>
           </MenuItem>

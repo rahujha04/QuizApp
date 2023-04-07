@@ -1,39 +1,56 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  li {
-    margin-bottom: 1em;
-  }
-  
-  input[type='radio'] {
-    margin-right: 0.5em;
-  }
-  
-  h2 {
-    margin: 0;
-  }
-  
-  p {
-    margin: 0;
-    margin-top: 0.5em;
-  }
-  
-  button {
-    margin-top: 1em;
-    padding: 0.5em 1em;
-    background-color: #0077cc;
-    color: #fff;
-    border: none;
-    border-radius: 0.25em;
-    font-size: 1em;
-    cursor: pointer;
-  }
-  
-  button:disabled {
-    background-color: #ccc;
-    cursor: default;
-  }
-  
+.quiz-selection-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.quiz-list {
+  width: 300px;
+}
+
+.quiz-name {
+  margin-bottom: 5px;
+  color: #212121;
+}
+
+.quiz-link {
+  text-decoration: none;
+}
+
+.quiz-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.quiz-description {
+  margin-bottom: 5px;
+  color: #757575;
+}
+
+.quiz-time {
+  margin-bottom: 5px;
+  color: #757575;
+}
+
+.MuiInputLabel-root {
+  color: #212121;
+}
+.MuiSelect-icon {
+  color: #212121;
+}
+.MuiInputBase-input {
+  color: #212121;
+}

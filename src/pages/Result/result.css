@@ -1,0 +1,55 @@
+.result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.result-card {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+}
+
+.result-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.result-score {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  color: #5cb85c;
+}
+
+.result-percentage {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+}
+
+.result-grade {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #5cb85c;
+  margin-top: 10px;
+}
+
+.result-feedback {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-top: 10px;
+}

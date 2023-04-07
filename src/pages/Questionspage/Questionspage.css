@@ -1,0 +1,74 @@
+.deselected {
+  background-color: rgb(70, 228, 78);
+}
+
+.selected {
+  background-color: rgba(128, 128, 128, 0.716);
+}
+
+.questions-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.question-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+}
+
+.question-card h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.question-prompt {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.question-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.option-button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.option-button:hover {
+  background-color: #e0e0e0;
+}
+
+.option-button.selected {
+  background-color: #80cbc4;
+  color: #fff;
+}
+
+.option-button.deselected:hover {
+  background-color: rgb(53, 173, 60);
+}
+
+.option-button.deselected {
+  background-color: #f0f0f0;
+  color: #000;
+  border: 1px solid #ddd;
+}
