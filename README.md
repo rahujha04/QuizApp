@@ -1,6 +1,3 @@
-# Project Link
-[https://quizzhubapp.netlify.app](QuizzApp)
-
 # Description of Project: 
 
 Looking for a fun and convenient way to test your knowledge? Look no further than our quiz app! Built with React JS and Firebase's Firestore database, It is easy to use and highly customizable.
