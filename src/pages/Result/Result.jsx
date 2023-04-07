@@ -1,10 +1,10 @@
-import React from 'react';
+import React  from 'react';
 import { useLocation } from 'react-router-dom';
 import './result.css';
 
 const Result = () => {
   const location = useLocation();
-  const { score, problemSize } = location.state;
+  const { score, problemSize } = location.state || {};
 
   // calculate percentage and assign grade based on percentage
   const percentage = (score / problemSize) * 100;

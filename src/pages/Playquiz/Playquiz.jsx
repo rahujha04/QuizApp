@@ -80,10 +80,10 @@ const Playquiz = () => {
         {quizzes.map((quiz) => (
           <MenuItem key={quiz.id} value={quiz.id}>
             <Link to={`/quiz/${quiz.id}`} className="quiz-link">
-              <h2 className="quiz-name">Quiz name: {quiz.name}</h2>
+              <h2 className="quiz-name">{quiz.name}</h2>
               <div className="quiz-details">
-                <p className="quiz-description">Quiz Description: {quiz.description}</p>
-                <p className="quiz-time">Quiz Time limit: {quiz.timeLimit} Seconds Per Question</p>
+                <p className="quiz-description">Description: {quiz.description}</p>
+                <p className="quiz-time">Time limit: {quiz.timeLimit} Seconds Per Question</p>
               </div>
             </Link>
           </MenuItem>
