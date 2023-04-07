@@ -1,3 +1,17 @@
+# Project Link
+[https://quizzhubapp.netlify.app/](QuizzApp)
+
+# Description of Project: 
+
+Looking for a fun and convenient way to test your knowledge? Look no further than our quiz app! Built with React JS and Firebase's Firestore database, It is easy to use and highly customizable.
+
+With two main sections - Set Quiz and Play Quiz - The app offers a flexible and intuitive interface for creating and taking quizzes. In the Set Quiz section, you can create your own quiz with a unique name, description, time limit per question in seconds, and up to four multiple-choice options. You can also specify the correct option index for each question, making it easy to create a quiz that challenges your knowledge and skills.
+
+Once you've created a quiz, you can share it with others or take it yourself in the Play Quiz section. Simply select the quiz you want to take and start answering the questions. With a built-in timer for each question, you'll need to think fast and act quickly to get the best score possible. Once you've answered all the questions, you'll see a result page with your score, percentage, grade, and feedback, allowing you to see how you did and where you can improve.
+
+Try it out today and see how much fun you can have while learning and challenging yourself!
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
