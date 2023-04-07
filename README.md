@@ -1,5 +1,5 @@
 # Project Link
-[https://quizzhubapp.netlify.app/](QuizzApp)
+[https://quizzhubapp.netlify.app](QuizzApp)
 
 # Description of Project: 
 
