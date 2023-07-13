@@ -49,7 +49,7 @@ const Playquiz = () => {
     const quizData = quizDoc.data();
     const problemIds = quizData.problems;
 
-    // console.log(quizData);
+    console.log(quizData);
   
     const problemRef = firestore.collection('problems').doc(problemIds);
     const problemDoc = await problemRef.get();
